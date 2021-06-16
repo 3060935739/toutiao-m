@@ -121,11 +121,12 @@ export default {
         duration: 0,
       });
       try {
-        const res = await login(this.user);
-        console.log(res);
+        const { data } = await login(this.user);
         Toast.success("登录成功");
+        //将后端返回的用户登录状态(token等数据)放到Vuex容器中
+        this.$store.commit("setUser", data.data);
+        this.$router.back()
       } catch (err) {
-        console.log(err);
         Toast.fail("登录失败");
       }
     },

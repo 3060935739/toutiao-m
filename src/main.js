@@ -10,6 +10,8 @@ import 'vant/lib/index.css';
 //全局样式
 import './styles/index.less'
 
+import './utils/day'
+
 //自动设置REM基准值(html标签字体大小)
 import 'amfe-flexible'
 
