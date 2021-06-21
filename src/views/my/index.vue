@@ -1,11 +1,7 @@
 <template>
   <div class="my-container">
     <van-cell-group v-if="user" class="myInfo">
-      <van-cell
-        class="baseInfo"
-        center
-        :border="false"
-      >
+      <van-cell class="baseInfo" center :border="false">
         <van-image
           class="avatar"
           slot="icon"
@@ -13,31 +9,33 @@
           fit="cover"
           :src="currentUser.photo"
         />
-        <div class="name" slot="title">{{currentUser.name}}</div>
-        <van-button class="updateBtn" size="small" round>编辑资料</van-button>
+        <div class="name" slot="title">{{ currentUser.name }}</div>
+        <van-button class="updateBtn" size="small" round to="/user/profile"
+          >编辑资料</van-button
+        >
       </van-cell>
       <van-grid class="dataInfo" :border="false">
         <van-grid-item class="dataInfoItem">
           <div slot="text" class="textWrap">
-            <div class="count">{{currentUser.art_count}}</div>
+            <div class="count">{{ currentUser.art_count }}</div>
             <div class="text">头条</div>
           </div>
         </van-grid-item>
         <van-grid-item class="dataInfoItem">
           <div slot="text" class="textWrap">
-            <div class="count">{{currentUser.follow_count}}</div>
+            <div class="count">{{ currentUser.follow_count }}</div>
             <div class="text">关注</div>
           </div>
         </van-grid-item>
         <van-grid-item class="dataInfoItem">
           <div slot="text" class="textWrap">
-            <div class="count">{{currentUser.fans_count}}</div>
+            <div class="count">{{ currentUser.fans_count }}</div>
             <div class="text">粉丝</div>
           </div>
         </van-grid-item>
         <van-grid-item class="dataInfoItem">
           <div slot="text" class="textWrap">
-            <div class="count">{{currentUser.like_count}}</div>
+            <div class="count">{{ currentUser.like_count }}</div>
             <div class="text">获赞</div>
           </div>
         </van-grid-item>
