@@ -1,8 +1,11 @@
 <template>
   <!-- <div class="article-item">文章列表项</div> -->
-  <van-cell class="article-item">
+  <van-cell
+    class="article-item"
+    :to="{ name: 'article', params: { articleId: article.art_id } }"
+  >
     <div slot="title" class="title van-multi-ellipsis--l3">
-      {{ article.title}}
+      {{ article.title }}
     </div>
     <div slot="label">
       <div class="cover-wrap" v-if="article.cover.type === 3">
@@ -17,7 +20,7 @@
       <div class="label-wrap">
         <span>{{ article.aut_name }}</span>
         <span>{{ article.comm_count }}评论</span>
-        <span>{{ article.pubdate  | relativeTime }}</span>
+        <span>{{ article.pubdate | relativeTime }}</span>
       </div>
     </div>
     <van-image
