@@ -1,6 +1,6 @@
 <template>
   <div class="video-container">
-    video
+    暂无接口
   </div>
 </template>
 

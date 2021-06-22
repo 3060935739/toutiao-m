@@ -1,6 +1,6 @@
 <template>
   <div class="qa-container">
-    qa
+    暂无接口
   </div>
 </template>
 

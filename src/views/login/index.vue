@@ -125,7 +125,12 @@ export default {
         Toast.success("登录成功");
         //将后端返回的用户登录状态(token等数据)放到Vuex容器中
         this.$store.commit("setUser", data.data);
-        this.$router.back()
+
+        //清除layout的缓存,让它重新渲染
+        this.$store.commit("removeCachePage", "LayoutIndex");
+
+        // this.$router.back();
+        this.$router.push(this.$route.query.redirect || "./");
       } catch (err) {
         Toast.fail("登录失败");
       }
